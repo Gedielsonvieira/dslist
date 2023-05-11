@@ -2,6 +2,7 @@
 - anotar topicos e pedir para o gpt criar um readme
     - projeto java com banco de dados em memoria h2, postgtre para colocar na nuvem e jpa
     - separado por ambiente de teste, homologação e produção
+    - Desenvolvimento orientado por domínio
 ## Aprendizados
 
 ### API
@@ -33,3 +34,12 @@ There was an unexpected error (type=Not Found, status=404).
 Ex: valorFinal
 
 - @Column(columnDefinition = "TEXT"): embora a string do Java aceite até 4GB ao não colocar essa anotação em um atributo que irá receber um texto longo a JPA ao fazer ORM ela vai entender que queremos que ela mapeie o atributo para um campo no BD como varchar, que aceita somente 255 caracteres
+
+- (DTO) Data transfer objects: Objetos customizados com informações precisas
+    - Algumas funções importantes do DTO
+        - Transferência de dados
+        - Abstração dos detalhes de implementação
+        - Redução do tráfego de rede
+
+- Não precisa da palavra reservada **this** quando não tem ambiguidade, ou seja, quando não temos um parametro com o mesmo nome do atributo da classe presente. 
+      
