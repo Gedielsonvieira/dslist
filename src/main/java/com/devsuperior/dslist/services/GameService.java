@@ -18,7 +18,6 @@ public class GameService {
 
     public List<GameMinDTO> findAllGames() {
         List<Game> listOfGames = gameRepository.findAll();
-        //ENTENDER O STREAM.MAP
         return listOfGames.stream().map(x -> new GameMinDTO(x)).toList();
     }
 }
