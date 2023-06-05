@@ -1,8 +1,11 @@
 package com.devsuperior.dslist.services;
 
 import com.devsuperior.dslist.dto.GameListDTO;
+import com.devsuperior.dslist.dto.GameMinDTO;
 import com.devsuperior.dslist.entities.GameList;
+import com.devsuperior.dslist.projections.GameMinProjection;
 import com.devsuperior.dslist.repositories.GameListRepository;
+import com.devsuperior.dslist.repositories.GameRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,9 +15,11 @@ import java.util.List;
 public class GameListService {
 
     private final GameListRepository gameListRepository;
+    private final GameRepository gameRepository;
 
-    public GameListService(GameListRepository gameListRepository) {
+    public GameListService(GameListRepository gameListRepository, GameRepository gameRepository) {
         this.gameListRepository = gameListRepository;
+        this.gameRepository = gameRepository;
     }
 
     @Transactional(readOnly = true)
@@ -24,9 +29,9 @@ public class GameListService {
     }
 
     @Transactional(readOnly = true)
-    public GameListDTO findListOfGameById(Long id) {
-        GameList gameList = gameListRepository.findById(id).get();
-        return new GameListDTO(gameList);
+    public List<GameMinDTO> findByList(Long listId) {
+        List<GameMinProjection> listOfGames = gameListRepository.searchByList(listId);
+        return listOfGames.stream().map(x -> new GameMinDTO(x)).toList();
     }
 
 

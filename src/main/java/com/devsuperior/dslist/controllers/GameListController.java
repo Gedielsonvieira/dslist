@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.controllers;
 
 import com.devsuperior.dslist.dto.GameListDTO;
+import com.devsuperior.dslist.dto.GameMinDTO;
 import com.devsuperior.dslist.services.GameListService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,8 +25,8 @@ public class GameListController {
         return gameListService.findAllListOfGame();
     }
 
-    @GetMapping(value = "/{id}")
-    public GameListDTO findListOfGameById(@PathVariable Long id) {
-        return gameListService.findListOfGameById(id);
+    @GetMapping(value = "/{listId}/games")
+    public List<GameMinDTO> findByList(@PathVariable Long listId) {
+        return gameListService.findByList(listId);
     }
 }

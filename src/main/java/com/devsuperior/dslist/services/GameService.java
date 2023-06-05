@@ -3,7 +3,6 @@ package com.devsuperior.dslist.services;
 import com.devsuperior.dslist.dto.GameDTO;
 import com.devsuperior.dslist.dto.GameMinDTO;
 import com.devsuperior.dslist.entities.Game;
-import com.devsuperior.dslist.repositories.GameListRepository;
 import com.devsuperior.dslist.repositories.GameRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +14,7 @@ public class GameService {
 
     private final GameRepository gameRepository;
 
-    public GameService(GameRepository gameRepository, GameListRepository gameListRepository) {
+    public GameService(GameRepository gameRepository) {
         this.gameRepository = gameRepository;
     }
 
