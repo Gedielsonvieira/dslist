@@ -1,13 +1,34 @@
 # Projeto java spring
 
-- anotar topicos e pedir para o gpt criar um readme
-    - projeto java com banco de dados em memoria h2, postgtre para colocar na nuvem e jpa
-    - separado por ambiente de teste, homologação e produção
-    - Desenvolvimento orientado por domínio ??
+## Descrição:
 
-conecção com bd na nuvem
+Este projeto foi desenvolvido em conjunto com <a href="https://devsuperior.com.br">DevSuperior</a>  com o intuito de
+obter mais cocnhecimento sobre o desenvolvimento back end e relembrar conceitos.
 
-gerar o modelo de dominio para o readme do projeto deposi de pornto
+## Tecnologias Utilizadas
+
+- Java
+- Frameworks:
+    - Spring Boot
+    - Spring Data JPA
+- Banco de dados em memória H2
+- Banco de dados PostgreSQL
+- Docker
+- Railway
+- Ferramentas de desenvolvimento
+    - IntelliJ IDEA
+    - Maven
+    - Git
+
+## Arquitetura do Projeto
+
+Este projeto foi desenvolvido seguindo a arquitetura de Desenvolvimento Orientado por Domínio (DDD).<br> Para facilitar
+o
+gerenciamento do código em diferentes ambientes, foi separado em três diferentes ambientes:
+
+- Teste
+- Homologação
+- Produção
 
 ## Aprendizados
 
@@ -64,11 +85,11 @@ There was an unexpected error (type=Not Found, status=404).
 > No cors_origins é especificado quais hosts, endreços estão autorizados a acessar o backend da minha aplicação.
 > Bloqueia uma aplicação não autorizada.
 
-### Integração e intrega continua
+### Integração e entrega continua
 
-> Se refere quando temos um projeto que está na nuvem e quando fazemos uma nova atualização na branch main 
-automaticamente vai disparar um novo deploy com isso o railway vai integrar essa nova mudança e implantar novamente 
-no railway
+> Se refere quando temos um projeto que está na nuvem e quando fazemos uma nova atualização em alguma branch
+> automaticamente vai disparar um novo deploy com isso o railway vai integrar essa nova mudança e implantar novamente
+> no railway
 
 ## Relembrando
 
