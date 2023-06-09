@@ -12,13 +12,19 @@ obter mais cocnhecimento sobre o desenvolvimento back end e relembrar conceitos.
     - Spring Boot
     - Spring Data JPA
 - Banco de dados em memória H2
-- Banco de dados PostgreSQL
-- Docker
-- Railway
 - Ferramentas de desenvolvimento
     - IntelliJ IDEA
     - Maven
     - Git
+
+### Ambiente local
+
+- Docker Compose
+
+### Implantação em produção
+
+- Railway
+- Banco de dados PostgreSQL
 
 ## Arquitetura do Projeto
 
@@ -29,6 +35,10 @@ gerenciamento do código em diferentes ambientes, foi separado em três diferent
 - Teste
 - Homologação
 - Produção
+
+## Modelo de domínio
+
+<img src="./image/modelo-de-dominio.png">
 
 ## Aprendizados
 
