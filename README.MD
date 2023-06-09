@@ -5,6 +5,8 @@
     - separado por ambiente de teste, homologação e produção
     - Desenvolvimento orientado por domínio ??
 
+conecção com bd na nuvem
+
 gerar o modelo de dominio para o readme do projeto deposi de pornto
 
 ## Aprendizados
@@ -52,6 +54,21 @@ There was an unexpected error (type=Not Found, status=404).
 
 - É uma interface que no Spring chamamos de projection e que dentro dessa interface consta metodos get correspondente a
   consulta realizada no repository
+
+### Railway
+
+> Railway é uma plataforma de infraestrutura na qual podemos fazer o deploy da aplicação na nuvem
+
+### CORS_ORIGINS
+
+> No cors_origins é especificado quais hosts, endreços estão autorizados a acessar o backend da minha aplicação.
+> Bloqueia uma aplicação não autorizada.
+
+### Integração e intrega continua
+
+> Se refere quando temos um projeto que está na nuvem e quando fazemos uma nova atualização na branch main 
+automaticamente vai disparar um novo deploy com isso o railway vai integrar essa nova mudança e implantar novamente 
+no railway
 
 ## Relembrando
 
