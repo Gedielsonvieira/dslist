@@ -34,5 +34,27 @@ public class GameListService {
         return listOfGames.stream().map(x -> new GameMinDTO(x)).toList();
     }
 
+    @Transactional
+    public void move(Long listId, int originIndex, int destinationIndex) {
+        List<GameMinProjection> listOfGames = gameListRepository.searchByList(listId);
+
+        /*
+        Foi feito a remoção e inserção do jogo na lista para que assim consigamos obter as novas posições
+        */
+        GameMinProjection obj = listOfGames.remove(originIndex);
+        listOfGames.add(destinationIndex, obj);
+
+        int min = originIndex < destinationIndex ? originIndex : destinationIndex;
+        int max = originIndex < destinationIndex ? destinationIndex : originIndex;
+
+        for (int i = min; i <= max; i++) {
+            /*
+            E com as novas posições da memória atualizamos o banco de dados informando em qual
+            lista vamos fazer esta modificação o id do jogo que vai sofrer a atualização e a sua nova posição
+            */
+            gameListRepository.updateBelongingPosition(listId, listOfGames.get(i).getId(), i);
+        }
+    }
+
 
 }
