@@ -2,8 +2,17 @@
 
 ## Descrição:
 
-Este projeto foi desenvolvido em conjunto com <a href="https://devsuperior.com.br">DevSuperior</a>  com o intuito de
+Este projeto é um sistema de coleções de jogos e foi desenvolvido em conjunto com <a href="https://devsuperior.com.br">
+DevSuperior</a>  com o intuito de
 obter mais cocnhecimento sobre o desenvolvimento back end e relembrar conceitos.
+
+### Funcionalidades:
+
+- Buscar todos os jogos
+- Buscar um jogo especifico por id
+- Buscar todas as coleções de jogos
+- Buscar uma coleção de jogo em específico
+- Possibilidade de reposicionar jogos na coleção
 
 ## Tecnologias Utilizadas
 
@@ -58,6 +67,10 @@ não é a mesma coisa até porque no back-end tem muito mais coisa do qeu está 
 - Sistema em camadas
 - Código sob demanda (opcional)
 
+#### Boas práticas de REST:
+
+- Não se utiliza verbo no endpoint e sim substântivo
+
 ### Erro padrão Spring
 
 Whitelabel Error Page
@@ -100,6 +113,21 @@ There was an unexpected error (type=Not Found, status=404).
 > Se refere quando temos um projeto que está na nuvem e quando fazemos uma nova atualização em alguma branch
 > automaticamente vai disparar um novo deploy com isso o railway vai integrar essa nova mudança e implantar novamente
 > no railway
+
+### @Modifying
+
+> Ao fazer uma operação no BD que não seja o Select utilizando uma query nativa a anotação @Modifying se faz necessária
+
+
+<h3 style="color:#ee3b3b"> Idempotência</h3>
+
+> Uma operação é idempotente se ela executada uma ou mais de uma vez produz o mesmo resultado
+> <br>Ex: Ao atualizar o endereço da minha residencia informando a rua e o número ao salvar esses dados 1 vez ou dez
+> vezes
+> sempre vai dar na mesma ou seja seria uma operação idempotente
+
+- PUT: É utilizado quando uma operação é idempotente
+- POST: É utilizado para criar e também atualizar quando o método não é idempotente
 
 ## Relembrando
 
